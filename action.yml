@@ -1,0 +1,17 @@
+name: 'Website Builder'
+description: 'Builds a static website from sources using rafaelmartins/website-builder'
+inputs:
+  source-dir:
+    description: 'Source directory'
+    required: false
+    default: '.'
+  build-dir:
+    description: 'Build directory'
+    required: false
+    default: '_build'
+runs:
+  using: 'docker'
+  image: 'rafaelmartins/website-builder:latest'
+  args:
+    - ${{ inputs.source-dir }}
+    - ${{ inputs.build-dir }}
