@@ -11,7 +11,7 @@ inputs:
     default: '_build'
 runs:
   using: 'docker'
-  image: 'rafaelmartins/website-builder:latest'
+  image: 'docker://rafaelmartins/website-builder:latest'
   args:
     - ${{ inputs.source-dir }}
     - ${{ inputs.build-dir }}
